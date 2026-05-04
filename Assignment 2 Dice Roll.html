@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Roller (DOM)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #9f9595;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #dice {
+      font-size: 250px;
+      margin: 20px 0;
+    }
+
+    #textResult {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Dice Roller</h1>
+
+
+  <div id="dice">🎲</div>
+  <div id="textResult">Click the button to roll</div>
+  <button id="rollBtn">Roll Dice</button>
+
+  <script>
+    
+    const diceEl = document.getElementById("dice");
+    const textEl = document.getElementById("textResult");
+    const button = document.getElementById("rollBtn");
+
+    
+    const diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+
+    button.addEventListener("click", function () {
+
+      
+      const randomNumber = Math.floor(Math.random() * 6) + 1;
+
+    
+      diceEl.textContent = diceFaces[randomNumber - 1];
+      textEl.textContent = "You rolled: " + randomNumber;
+
+    });
+  </script>
+
+</body>
+</html>
+</body>
+</html>
